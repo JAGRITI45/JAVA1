@@ -1,0 +1,20 @@
+// NATURAL NUMBER:
+int n=sc.nextInt();
+int sum=0;
+for(int i=0;i<=n;i++) {
+	sum= sum+i;
+}
+System.out.println("sum of natural number:" + sum);
+// CUBE	
+int a = sc.nextInt();
+int cube=0;
+for(int i=1;i<=a;i++) {
+	cube =i*i*i;
+
+System.out.println("cube is "+ cube);
+}
+// PRINT IT TO A-Z:
+/*for (char c='a';c<='z';c++) {
+	System.out.print(c + " ");
+	// ASCII value (use)
+}
