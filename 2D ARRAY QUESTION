@@ -1,0 +1,102 @@
+package pratice;
+import java.util.*;
+public class java {
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	/*int product = sc.nextInt();
+	int branch =sc.nextInt();
+	
+	int[][] sales = new int[product][branch];
+	// decleration of array:
+	for(int i=0;i<product;i++) {
+		for(int j=0;j<branch;j++);{
+			sales[i][j]=sc.nextInt();
+		}
+	}
+	int maxsales=0 , bestproduct=-1;
+	for(int i=0;i<product;i++) {
+		int totalsales=0;
+		for(int j=0;j<branch;j++) {
+			totalsales += sales[i][j];
+		}
+		if(totalsales>maxsales) {
+			maxsales=totalsales;
+			bestproduct = i;
+		}
+	}
+	System.out.println("product with highest sales:" + (bestproduct +1) +"(total ales:" +maxsales+ ")");
+	*/
+/*int student = sc.nextInt();
+int subject = sc.nextInt();
+
+int[][] marks = new int[student][subject];
+
+for(int i=0;i<student;i++) {
+	for(int j=0;j<subject ;j++) {
+		marks[i][j]=sc.nextInt();
+	}
+}
+int beststudent = 1;
+double highestAvg = 0;
+
+for(int i=0;i<student;i++) {
+	int totalmarks=0;
+	for(int j=0;j<subject;j++) {
+		totalmarks += marks[i][j];
+	}
+	
+	double avg = totalmarks /(double) student;
+	if(avg> highestAvg) {
+		highestAvg = avg;
+		beststudent = i;
+	}
+}
+System.out.println(" best performance " + (beststudent + 1));
+System.out.println(" highest performance" + highestAvg );
+*/
+  
+/*int ebed = sc.nextInt();
+int obed = sc.nextInt();
+int [][] bed = new int [ebed][obed];
+
+for(int i=0;i<ebed;i++) {
+	for(int j=0;j<obed;j++) {
+		bed[i][j] = sc.nextInt();	
+	}
+}
+int emptybed=0;
+for(int i=0;i<ebed;i++) {
+	for(int j=0;j<obed;j++) {
+		if(bed[i][j] == 0) {
+			emptybed ++;
+		}
+	}
+	
+}
+System.out.println(emptybed);
+*/
+
+// TRAAFIC SIGNAL
+/*int road = sc.nextInt();
+int signal = sc.nextInt();
+
+int[][] traffic = new int[road][signal];
+
+for(int i=0;i<road;i++) {
+	for(int j=0 ;j<signal;j++) {
+		traffic[i][j] = sc.nextInt();
+	}
+}
+int redlight =0;
+for(int i=0;i<road;i++) {
+	for(int j=0;j<signal;j++) {
+		if(traffic[i][j] == 1) {
+			redlight++;
+		}
+	}
+}
+System.out.println(redlight);	 
+	}
+}*/
+
+
