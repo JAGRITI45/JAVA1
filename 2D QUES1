@@ -1,0 +1,92 @@
+The first line of input consists of the rows and columns N of the table.
+
+The next N lines of input consist of N space-separated integers in each line, representing the elements of the table.
+
+Output format :
+The first N rows and N columns of the output represent the original cell data of the input table.
+
+The last row of the output represents the sum of each column in the input table.
+
+The last column of the output represents the sum of each row of the input table.
+
+The bottom-right cell of the output represents the overall sum of the input table.
+
+
+
+Refer to the sample output for a better understanding.
+
+Code constraints :
+1 <= N <= 10
+
+Sample test cases :
+Input 1 :
+2
+1 2
+3 4
+Output 1 :
+1 2 3 
+3 4 7 
+4 6 10 
+Input 2 :
+3
+1 2 3
+4 5 6
+7 8 9
+Output 2 :
+1 2 3 6 
+4 5 6 15 
+7 8 9 24 
+12 15 18 45 
+ ANSWER
+
+package pratice;
+import java.util.*;
+public class java {
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int N =  sc.nextInt();
+	int arr[][] = new int[N + 1][N + 1];
+// We create a 2D array (arr[][]) of size (N+1) x (N+1).
+// The extra row and column (N+1) are used to store the row sums and column sums.
+	
+	/*for(int i=0;i<N;i++) {
+		for(int j=0;j<N;j++) {
+			arr[i][j] = sc.nextInt();
+		}
+	}*/
+	
+	for(int i=0;i<N;i++) {
+		int rowssum=0;
+		for(int j=0;j<N;j++) {
+			arr[i][j] = sc.nextInt();
+			rowssum += arr[i][j];
+		}
+		arr[i][N]=rowssum;
+// arr[i][N] stores the sum of each row in the last column.
+	}
+	for(int j=0;j<N;j++) {
+		int colsum=0;
+		for(int i=0;i<N;i++) {
+			colsum += arr[i][j];
+// arr[N][j] stores the sum of each column in the last row.
+			
+		}
+		arr[N][j] = colsum;
+	}
+	int totsum=0;
+	//for(int i=0;i<N;i++) {
+		for(int j=0;j<N;j++) {
+			totsum +=arr[N][j];
+		}
+		arr[N][N] =totsum;
+	
+	for(int i=0;i<=N;i++) {
+		for(int j=0;j<=N;j++) {
+			System.out.print(arr[i][j] + " ");
+		}
+//arr[N][N] stores this total sum in the bottom-right cell
+		
+		System.out.println();
+	}
+	
+	}}
