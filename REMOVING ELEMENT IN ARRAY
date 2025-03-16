@@ -23,7 +23,7 @@ public class java {
     arr[i]=sc.nextInt();  
     }
 	if(N>=3) {
-		for(int i=2 ;i<N-1;i++) {
+		for(int i=2 ;i<N-1;i++) { // WE WILL START FRM 2 BEC WE HAVE TO REMOVE THE ELEMENT 3 .I.E WHICH MEANS THE ELEMENT WHICH WE HAVE TO REMOVE WE HAVE TO INTIALIZE THE i FRM ONE PREVOIUS INDEX.
 		arr[i] = arr[i+1]; // ADDING ELEMENT TO LEFT SIDE.
 }
 		N--;
