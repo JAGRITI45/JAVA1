@@ -1,0 +1,95 @@
+// use following function 
+package pratice;
+import java.util.*;
+public class Bank {
+	static double balance =0;
+static void deposit(double amt) {
+	balance += amt;
+	System.out.println("deposited:" + amt);
+}
+static void withdraw(double amt) {
+	if(amt>balance) {
+		System.out.println("insuuficent balance");
+	}else {
+		balance -= amt;
+		System.out.println("withdraw" + amt);
+	}
+}
+static void checkbalance() {
+	System.out.println("balance"+ balance);
+}
+
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	while(true) {
+		System.out.println("\n Bank Menu");
+		System.out.println("1. Deposit");
+		System.out.println("2. withdraw");
+		System.out.println("3. Check balance");
+		System.out.println(" enter your choice:");
+		int choice = sc.nextInt();
+		if(choice == 4) break;
+		if(choice == 1) {
+			System.out.println(" enter amt to deposit");
+			double amt= sc.nextInt();
+		}
+		else if(choice ==2) {
+		System.out.println(" withdraw");
+		double amt = sc.nextInt();
+		withdraw(amt);
+	}
+		else if(choice ==3) {
+		checkbalance();
+	}else {
+		System.out.println(" invalid choice");
+	} }}}
+
+
+
+// charchter is a vowel or consonant.+
+public class Char {
+static String character(char ch) {
+	ch = Character.toLowerCase(ch);
+	if(ch =='a' || ch=='e' ||  ch=='i' || ch=='o' || ch=='u') {
+		return "vowel";
+	}else {
+		return "Consonant";
+	}
+		
+}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println(" enter a character");
+		char ch = sc.next().charAt(0);		
+System.out.println(character(ch));
+	}}
+
+
+
+// WAP to calculate the % and grade based on marks of 5 subject.
+import java.util.*;
+public class Marks {
+static String grade(double percentage) {
+	if(percentage >=90) return "A";
+	else if(percentage >=80) return "B";
+	else if(percentage >= 70) return "C";
+	else if(percentage >=60) return "D";
+	else return "fail";
+}
+
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int totalmarks =0, subject =5;
+	
+for(int i =0;i<=subject;i++) {
+	System.out.println(" enter marks for sub"+ i+ ":");
+	totalmarks += sc.nextInt();
+}
+double percentage = (double) totalmarks/subject;
+String grades= grade(percentage);
+System.out.println("percentage"+ percentage);
+System.out.println("grade"+ grades);
+}
+}
